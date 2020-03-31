@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <link href="Main.css" rel="stylesheet"/>
+    <script src="jquery-1.10.2.min.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <img src="logo.png" id="logo"/>
+      <img src="1.png" id="i1"/>
+      <img src="2.png" id="i2"/>
+      <img src="3.png" id="i3"/>
+      <img src="4.png" id="i4"/>
+
+      <div id="msg1">CREATIVE</div>
+      <div id="msg2">DES</div>
+      <div id="msg3">IGN</div>
+
+      <div id="menu">
+        <ul>
+          <li>HOME</li>
+          <li>WORK</li>
+          <li>ABOUT</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var m1 = $('#msg1');
+    var m2 = $('#msg2');
+    var m3 = $('#msg3');
+    var img = $('#i2');
+    var img2 = $('#i4');
+    var main = $('#main');
+
+    main.mousemove(function(e){
+        var x = (e.pageX * -1 / 15);
+        var y = (e.pageY * -1 / 20);
+
+        m1.css({
+            'transform':'translate3d('+x+'px,'+y+'px,0)'
+        });
+        m2.css({
+            'transform':'translate3d('+(x*-1.2)+'px,'+(y*-1.6)+'px,0)'
+        });
+        m3.css({
+            'transform':'translate3d('+(x*0.5)+'px,'+(y*-0.4)+'px,0)'
+        });
+    });
+
+
+    main.mousemove(function(e){
+        var x = (e.pageX * -1 / 85);
+        var y = (e.pageY * -1 / 90);
+
+        img.css({
+            'transform':'translate3d('+x+'px,'+y+'px,0)'
+        });
+        img2.css({
+            'transform':'translate3d('+(x*-2.5)+'px,'+y+'px,0)'
+        });
+
+    });
+
+
+
+  </script>
+
+
+
+</html>
